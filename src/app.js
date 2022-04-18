@@ -29,7 +29,7 @@ $('#btn_auth').on('click', function(){
 })
 $('#block_accept_login').on('click', function(){
   $('#block_setting_login').show(300);
-
+  return false;
 })
 $('#nav_hamb').on('click', function(){
   $('#block_hamb').show(300);
@@ -39,6 +39,10 @@ $('#nav_hamb_block').on('click', function(){
 })
 $('#donate_block_saom').on('click', function(){
   $('#donate_block_account').show(300);
+  return false;
+})
+$('#start_play').on('click', function(){
+  $('#block_start_one').scroll(300);
   return false;
 })
 
