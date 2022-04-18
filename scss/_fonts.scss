@@ -1,0 +1,11 @@
+@mixin fonts_type_one{
+    font-family: 'Inter',sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+@mixin fonts_type_two{
+    font-family: 'Inter',sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+}

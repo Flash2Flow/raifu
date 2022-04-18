@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <!--css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>raifu anime</title>
+    <script src="https://kit.fontawesome.com/ded8d66c61.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!--hidden auth-->
+
+<form action="" class="auth" id="auth">
+    <div class="container_block">
+        <div class="block_auth_name">
+            <h3 class="auth_name">Авторизация</h3>
+            <h5 class="down_auth_name">Войдите в свой аккаунт, чтобы продолжить.</h5>
+        </div>
+        <div class="block_input_login">
+            <h4 class="up_login">Логин</h4>
+            <input type="text" name="login" class="login" placeholder="Введите логин">
+        </div>
+        <div class="block_input_password">
+            <h4 class="up_password">Пароль</h4>
+            <input type="password" name="password" class="password" placeholder="Введите пароль">
+        </div>
+        <div class="block_remember_me">
+            <input type="checkbox" name="checked" >Запомнить меня!
+        </div>
+        <div class="block_btn_submit">
+            <!--тут тип поменяй на submit когда отправку отправлять будешь-->
+            <button class="btn_auth" type="button" id="btn_auth">Войти!</button>
+
+            <h6 class="registration_info">У вас нету аккаунта? <a href="" class="registr_link" id="open_reg">Зарегистрируйте!</a></h6>
+        </div>
+    </div>
+</form>
+
+<!--hidden reg-->
+<form action="" class="reg" id="reg">
+    <div class="container_block">
+        <div class="block_auth_name">
+            <h3 class="auth_name">Регистрация</h3>
+            <h5 class="down_auth_name">Присоединяйтесь к нам и играйте на качественных серверах.</h5>
+        </div>
+        <div class="block_input_login">
+            <h4 class="up_login">Логин</h4>
+            <input type="text" name="login" class="login" placeholder="Введите логин">
+        </div>
+        <div class="block_input_email">
+            <h4 class="up_login">Email</h4>
+            <input type="email" name="login" class="email" placeholder="Введите email">
+        </div>
+        <div class="block_input_password">
+            <h4 class="up_password">Пароль</h4>
+            <input type="password" name="password" class="password" placeholder="Введите пароль">
+        </div>
+        <div class="block_input_repassword">
+            <h4 class="up_password">Повторите пароль</h4>
+            <input type="password" name="repassword" class="password" placeholder="Повторите пароль">
+        </div>
+        <div class="block_btn_submit">
+            <!--тут тип поменяй на submit когда отправку отправлять будешь-->
+            <button class="btn_reg" type="button">Зарегистрироваться!</button>
+        </div>
+    </div>
+</form>
+
+    
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="header_block_name">
+                        <h1 class="name_project">RAO</h1>
+                    </div>
+                </div>
+                <div class="col-md-10">
+                    <!--hamb-->
+                    <div class="block_hamb" id="block_hamb">
+                        <div class="nav_hamb_block" id="nav_hamb_block">
+                            <div class="one_line_block"></div>
+                            <div class="two_line_block"></div>
+                            <div class="three_line_block"></div>
+                        </div>
+
+                        <ul class="menu">
+                            <a href="#"><li class="menu_nav">Правила</li></a>
+                            <a href="#"><li class="menu_nav">Донат</li></a>
+                            <a href="https://forum.raifu.land/"><li class="menu_nav">Форум</li></a>
+                            <a href="#"><li class="menu_navv" id="open_auth">Вход</li></a>
+                    </div>
+
+                    <div class="nav_hamb" id="nav_hamb">
+                        <div class="one_line"></div>
+                        <div class="two_line"></div>
+                        <div class="three_line"></div>
+                    </div>
+
+                    <div class="block_nav">
+                        <ul class="menu">
+                            <a href="#"><li class="menu_nav">Правила</li></a>
+                            <a href="#"><li class="menu_nav">Донат</li></a>
+                            <a href="https://forum.raifu.land/"><li class="menu_nav">Форум</li></a>
+                            <li class="menu_navv" id="open_auth">Вход</li>
+                            <!--когда жмёт на кнопку войти, пропадает кнопка входа и само окно входа. После появляется аватар с настройками-->
+                            <div class="block_accept_login" id="block_accept_login"><i class="fa-solid fa-user"></i></div>
+                            <div class="block_setting_login" id="block_setting_login">
+                                <div class="container_setting">
+                                    <div class="block_setting_name">
+                                        <h5 class="setting_name">Личный кабинет</h5>
+                                    </div>
+                                    <div class="setting_login">
+                                        <h5 class="login_lk">Ваш логин:</h5>
+                                        <h5 id="login_lk">#login_lk</h5>
+                                    </div>
+                                    <div class="setting_password">
+                                        <h5 class="password_lk">Ваш пароль:</h5>
+                                        <h5 id="password_lk">#password_lk</h5>
+                                    </div>
+                                    <div class="setting_email">
+                                        <h5 class="email_lk">Ваша почта:</h5>
+                                        <h5 id="email_lk">#email_lk</h5>
+                                    </div>
+                                    <div class="btn_setting_login">
+                                        <!--Если тебе надо будет ещё кнопка выйти, то убери комментарий от сюда и с style.scss на строчке 598 (<button class="loggout" type="button">ВЫЙТИ!</button>)-->
+                                        <button class="change_password" type="button">СМЕНИТЬ ПАРОЛЬ!</button>
+                                    </div>
+                                </div>
+                            </div>                 
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--download--> 
+    <div class="block_download_java" id="block_download_java">
+        <div class="container_block_download">
+            <div class="block_one_download">
+                <a href="https://vk.com/away.php?utf=1&to=https%3A%2F%2Fraifu.land%2Fdownload%2FJava%2Fjre-8u321_v.1.12.2-x64.exe" target="_blank" class="block_java_saom">
+                    JAVA для SAOM
+                </a>
+            </div>
+            <div class="block_two_download">
+                <a href="https://vk.com/away.php?to=https%3A%2F%2Fraifu.land%2Fdownload%2FJava%2Fjre-8u51_v.1.16.5-x64.exe&cc_key=" target="_blank" class="block_java_ds">
+                    JAVA для Demon Slayer
+                </a>
+            </div>
+            <div class="block_three_download">
+                <a href="https://vk.com/away.php?to=https%3A%2F%2Fraifu.land%2Fdownload%2FJava%2Fjdk-16_v.1.17.1-x64_bin.exe&cc_key=" target="_blank" class="block_java_bc">
+                    JAVA для black clover
+                </a>
+            </div>
+        </div>
+    </div>
+ 
+    <div class="block_download_launch" id="block_download_launch">
+        <div class="container_block_download">
+            <div class="block_one_download">
+                <a href="https://vk.com/away.php?to=https%3A%2F%2Fraifu.land%2FRaifu%2520Anime%2520Online.exe&cc_key=" target="_blank" class="block_java_win">
+                    Лаунчер для Windows
+                </a>
+            </div>
+            <div class="block_two_download">
+                <a href="https://vk.com/away.php?to=https%3A%2F%2Fraifu.land%2FRaifu%2520Anime%2520Online.jar&cc_key=" target="_blank" class="block_java_mac">
+                    Лаунчер для MacOS
+                </a>
+            </div>
+        </div>
+    </div> 
+
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="section_block_info">
+                    <h1 class="section_info">RAIFU ANIME ONLINE</h1>
+
+                    <p class="text_info">
+                    Присоединяйся в мир фэнтези и<br>
+                    приключений...
+                    </p>
+
+                    <a href="#" class="btn">НАЧАТЬ ИГРАТЬ!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="who_section">
+    <div class="container">
+        <div class="block_who_game">
+            <h1 class="who_game">КАК НАЧАТЬ ИГРАТЬ?</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="block_start_one">
+                    <div class="container_block">
+                        <div class="block_name_one">
+                            <h1 class="name_start_one">Создание аккаунта.</h1>
+                        </div>
+                        <div class="block_info_name">
+                            <p class="info_name_one">
+                            Зарегистрируй аккаунт<br>
+                            по кнопке и переходи<br>
+                            к следующему шагу.
+                            </p>
+                        </div>
+                        <div class="block_btn">
+                            <a href="" class="btn_one_block" id="open_reg_two">СОЗДАТЬ АККАУНТ!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="block_start_two">
+                    <div class="container_block">
+                        <div class="block_name_one">
+                            <h1 class="name_start_one">Скачать файлы.</h1>
+                        </div>
+                        <div class="block_info_name">
+                            <p class="info_name_two">
+                            Скачайте нужную вам<br>
+                            JAV`У для игры.
+                            </p>
+                        </div>
+                        <div class="block_btn">
+                            <a href="#" class="btn_one_block" id="download_java">СКАЧАТЬ JAV`У!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="block_start_three">
+                    <div class="container_block">
+                        <div class="block_name_one">
+                            <h1 class="name_start_one">Скачайте лаунчер.</h1>
+                        </div>
+                        <div class="block_info_name">
+                            <p class="info_name_three">
+                            Скачайте нужный вам
+                            лаунчер под вашу
+                            операционную систему.
+                            </p>
+                        </div>
+                        <div class="block_btn">
+                            <a href="#" class="btn_one_block" id="download_launch">СКАЧАТЬ ЛАУНЧЕР!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="block_footer_name">
+                    <h1 class="footer_name">
+                        RAIFU ANIME ONLINE
+                    </h1>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="block_btn_footer">
+                    <a href="#" class="footer_btn">НАЧАТЬ ИГРАТЬ!<i class="fa-solid fa-arrow-right-long left"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="social_footer_btn">
+                    <a href="https://vk.com/raifu.land" class="vk_link"><i class="fa-brands fa-vk right"></i>Мы ВКонтакте!</a>
+                    <a href="https://discord.com/invite/raifuland" class="discord_link"><i class="fa-brands fa-discord right"></i>Мы в Discord`е!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="src/jquery-3.6.0.min.js"></script>
+<script src="src/app.js"></script>
+</body>
+</html>
